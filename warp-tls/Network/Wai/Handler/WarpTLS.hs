@@ -277,6 +277,7 @@ runTLSSocket' tlsset@TLSSettings{..} set credential sock app =
       , TLS.supportedSecureRenegotiation = True
       , TLS.supportedClientInitiatedRenegotiation = False
       , TLS.supportedSession             = True
+      , TLS.supportedFallbackScsv        = True
       }
 
 alpn :: [S.ByteString] -> IO S.ByteString
